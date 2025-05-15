@@ -559,7 +559,7 @@ public class ChunkManager {
 
         Location itemLoc = getNearestLocation(player.getLocation(), positions);
         Location loc = itemLoc.clone();
-        loc.setY(player.getY());
+        loc.setY(player.getLocation().getY());
 
         ItemDisplay itemDisplay = world.spawn(loc, ItemDisplay.class, CreatureSpawnEvent.SpawnReason.CUSTOM);
         itemDisplay.setItemStack(new ItemStack(material));
@@ -1284,7 +1284,7 @@ public class ChunkManager {
                     player.playSound(player.getLocation(), teleportSound, teleportVolume, teleportPitch);
                     lockAllChunks(player);
                     autoAssignItemsForNearbyChunks(player);
-                    unlockChunk(player, player.getChunk());
+                    unlockChunk(player, player.getLocation().getChunk());
 
                     cancel();
                     return;

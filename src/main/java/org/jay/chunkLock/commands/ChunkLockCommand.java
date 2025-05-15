@@ -103,12 +103,12 @@ public class ChunkLockCommand implements CommandExecutor, TabExecutor {
                         MessageSender.sendMessage(player, "§aConfig reloaded.");
                         break;
                     case "additem":
-                        plugin.addRequiredItemStack(player.getChunk(), player.getInventory().getItemInMainHand());
+                        plugin.addRequiredItemStack(player.getLocation().getChunk(), player.getInventory().getItemInMainHand());
                         plugin.saveCustomItems();
                         MessageSender.sendMessage(player, "§aHand item Added to your current chunk.");
                         return true;
                     case "removeitem":
-                        plugin.removeRequiredItemStack(player.getChunk());
+                        plugin.removeRequiredItemStack(player.getLocation().getChunk());
                         plugin.saveCustomItems();
                         MessageSender.sendMessage(player, "§bYour current chunk's default item has been clear.");
                         return true;
