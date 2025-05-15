@@ -1,4 +1,4 @@
-##ss 🌐 ChunksLock - New Way to play Minecraft Unlocked
+## 🌐 ChunksLock - New Way to play Minecraft Unlocked
 
 **ChunksLock** is a highly configurable Minecraft plugin designed to create a unique survival experience for every
 player. When players join your server, they are assigned a **private world** (based on a template) where they can unlock
@@ -8,7 +8,7 @@ chunk border limits, protections, and more.
 
 > Ideal for **progression-based**, **survival**, or **challenge**-oriented Minecraft servers!
 
----
+--- 
 
 ## 📖 Overview
 
