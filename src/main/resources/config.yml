@@ -1,0 +1,98 @@
+custom-required-items:
+biomes:
+# Prefix to be displayed before messages in the chat for this ChunkLock plugin
+prefix: "&#b700fdC&#c000fah&#c900f8u&#d200f6n&#db00f3k&#e400f1L&#ed00efo&#f600ecc&#ff00eak &7>> "
+
+# Maximum distance a player can unlock chunks from the spawn (in chunks)
+max-distance-from-spawn: 100
+
+# List of the worlds that will count as like lobby world and ChunkLock plugin's core mechanism will be restricted to them.
+restricted-worlds:
+  - "world"
+  - "hub"
+
+# Whether to enable debugging messages in the plugin
+debug: false  # Set to true to enable debugging (useful for troubleshooting)
+border:
+  width: 100  # Width of the border in chunks
+  height: 200  # Height of the border in chunks
+  lineWidth: 641  # Width of the border in chunks
+
+# Option to automatically assign chunks to players when they first join
+auto-chunk-assignment: true  # true means chunks will be assigned on first join
+
+# movement of floating items in y axis
+floating-item-movement: false
+
+# Protection settings that prevent certain player actions in locked chunk areas
+protection:
+  # Prevent players from breaking blocks in locked chunk areas
+  prevent-block-break: true
+  # Prevent players from placing blocks in locked chunk areas
+  prevent-block-place: true
+  # Prevent players from interacting with blocks (e.g., opening chests) in locked chunk areas
+  prevent-interaction: true
+  # Prevent players from dropping items in locked chunk areas
+  prevent-item-drop: true
+
+# Name of the world template file that will be used when creating new player worlds
+template-world-name: "template_world"  # Set this to the name of the world to use as the template for player worlds
+
+# Minimum required amount of items to unlock a chunk
+minimumRequiredAmount: 1
+# Maximum required amount of items to unlock a chunk
+maximumRequiredAmount: 32
+
+# Animation when a chunk unlocks
+unlockAnimationEnabled: true
+
+# Should players be automatically teleported to chunk world upon joining?
+teleport-on-join: true  # true means they will be teleported to the chunk world
+
+# Fallback option to teleport players to the lobby if the world template is missing
+fallback-lobby-enabled: true  # Set to true to enable fallback teleportation
+
+# Timer for teleporting a player to their chunk world
+delay-seconds: 5
+
+# Sound settings for various actions, such as unlocking chunks and teleporting
+sound:
+  # Sound played when unlocking a chunk
+  unlock:
+    name: "ENTITY_PLAYER_LEVELUP"  # Sound name (when a player levels up)
+    volume: 1.0  # Volume of the sound (0.0 to 1.0)
+    pitch: 1.0   # Pitch of the sound (0.0 to 2.0)
+
+  # Sound played when teleporting a player
+  teleport:
+    name: "ENTITY_ENDERMAN_TELEPORT"  # Sound name (Enderman teleport sound)
+    volume: 1.0  # Volume of the sound (0.0 to 1.0)
+    pitch: 1.0   # Pitch of the sound (0.0 to 2.0)
+  # Sound played when timer ticks during teleporting a player
+  unlocking-tick:
+    name: "BLOCK_NOTE_BLOCK_PLING"  # Sound name (Block note timer sound)
+    volume: 1.0  # Volume of the sound (0.0 to 1.0)
+    pitch: 1.0   # Pitch of the sound (0.0 to 2.0)
+
+# Messages that are sent to players at various points in the plugin’s flow
+messages:
+  # Message shown when a player tries to interact with a locked chunk
+  chunk-locked: "&cThis chunk is locked! Required items: {items}"
+  # Message shown when a player successfully unlocks a chunk
+  chunk-unlocked: "&aYou unlocked the chunk!"
+  # Message shown when a player tries to unlock a chunk too far from spawn
+  too-far: "&cYou can't unlock chunks more than {max} chunks from spawn!"
+  # Message shown for any general errors or issues
+  error: "&cSomething went wrong!"
+  # Message shown when a player is being teleported to their world
+  teleporting: "&aTeleporting to your world..."
+  # Message shown when the world template is missing
+  missing-template: "&cNo template configured. Sending to lobby."
+  # Message shown when teleporting starts (with a countdown)
+  starting: "&eTeleporting to the world in {seconds} seconds..."
+  # Countdown message shown during teleportation
+  countdown: "&bTeleporting in {seconds} second(s)..."
+  # Message shown when the teleportation is complete
+  done: "&aTeleported!"
+  # Message shown when the player tries to teleport but no chunk is set
+  no-location: "&cPlease first set a chunk!"

@@ -1,0 +1,19 @@
+name: ChunkLock
+version: '1.0-SNAPSHOT'
+main: org.jay.chunkLock.ChunkLockPlugin
+api-version: '1.21'
+prefix: ChunkLock
+softdepend:
+  - PlaceholderAPI
+authors: [ JayGamerz ]
+description: A Minecraft plugin by JayGamerz
+website: https://www.youtube.com/jaygamerz
+commands:
+  chunklock:
+    description: ChunkLock Main command
+    usage: /<command>
+permissions:
+  chunklock.player:
+    default: true
+  chunklock.admin:
+    default: op

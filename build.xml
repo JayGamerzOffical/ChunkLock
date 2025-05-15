@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="ChunkLock" default="Build" basedir=".">
+    <target name="Build">
+        <jar jarfile="C:\Users\bittu\Desktop\SparkVerseServer\plugins\${ant.project.name}.jar"
+             basedir="target/classes"
+             includes="**/*">
+        </jar>
+    </target>
+</project>
